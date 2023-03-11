@@ -1,1 +1,2 @@
-conflict?
+conf
+Nah no conflict
