@@ -8,7 +8,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  check-links:
+  make-report:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +21,7 @@ jobs:
         run: |
           pip install pytest
           pip install pytest-cov
-          pytest --cov=./ --cov-report=xml ./A2/test.py
+          pytest --cov=./ --cov-report=xml ./test.py
           
       - name: Display Coverage Report
         run: |
