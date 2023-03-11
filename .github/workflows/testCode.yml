@@ -20,6 +20,4 @@ jobs:
         uses: actions/setup-python@v4
 
       - name: Unit Test
-        run: |
-          pip install pytest
-          pytest test.py
+        run: python test.py
