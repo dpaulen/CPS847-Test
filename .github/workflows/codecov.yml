@@ -1,0 +1,28 @@
+name: 'Code Coverage'
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Coverage Report Generation
+        run: |
+          pip install pytest
+          pip install pytest-cov
+          pytest --cov=./ --cov-report=xml ./A2/test.py
+          
+      - name: Display Coverage Report
+        run: |
+          cat coverage.xml
