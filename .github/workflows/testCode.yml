@@ -3,10 +3,6 @@ name: 'Python Unit Test'
 on:
   workflow_dispatch:
 
-  push:
-
-  pull_request:
-
 permissions:
   contents: read
   pull-requests: read
