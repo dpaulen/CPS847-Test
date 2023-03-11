@@ -1,4 +1,3 @@
-def cps6410 (x):
+def cps6410 (y):
    return 10*y
 
-# newline
